@@ -1,0 +1,112 @@
+import java.util.Scanner;
+/* This QCA calculator is for Students 
+ * that earn 6 credits for completing each module.
+ */
+public class QCA {
+  
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter in Number of Modules: ");
+		
+		int moduleNum = input.nextInt();
+		
+		double qca = 0.00;
+		
+		double avgQca = 0.0;
+		
+		int i = 0;
+		
+		while(i < moduleNum)
+		{	
+			System.out.println("Enter in grade (E.g. 'A1', 'B3): ");
+			
+			String grade = input.next();
+			
+			if(grade.equals("A1") || grade.equals("a1"))
+			{
+				avgQca += 4.0;
+				
+				i++;
+			}
+			else if(grade.equals("A2") || grade.equals("a2"))
+			{
+				avgQca += 3.6;
+				
+				i++;
+			}
+			else if(grade.equals("B1") || grade.equals("b1"))
+			{
+				avgQca += 3.2;
+				
+				i++;
+			}
+			else if(grade.equals("B2") || grade.equals("b2"))
+			{
+				avgQca += 3.0;
+				
+				i++;
+			}
+			else if(grade.equals("B3") || grade.equals("b3"))
+			{
+				avgQca += 2.8;
+				
+				i++;
+			}
+			else if(grade.equals("C1") || grade.equals("c1"))
+			{
+				avgQca += 2.6;
+				
+				i++;
+			}
+			else if(grade.equals("C2") || grade.equals("c2"))
+			{
+				avgQca += 2.4;
+				
+				i++;
+			}
+			else if(grade.equals("C3") || grade.equals("c3"))
+			{
+				avgQca += 2.0;
+				
+				i++;
+			}
+			else if(grade.equals("D1") || grade.equals("d1"))
+			{
+				avgQca += 1.6;
+				
+				i++;
+			}
+			else if(grade.equals("D2") || grade.equals("d2"))
+			{
+				avgQca += 1.2;
+				
+				i++;
+			}
+			else if(grade.equals("F") || grade.equals("f"))
+			{
+				avgQca += 0.00;
+				
+				i++;
+			}
+			else if(grade.equals("NG") || grade.equals("ng"))
+			{
+				avgQca += 0.00;
+				
+				i++;
+			}
+			else
+			{
+				System.out.println("Incorrect!!!");
+			}
+				
+		}
+		
+		qca = avgQca/moduleNum;
+		
+		System.out.println(qca);
+	}
+
+}
+
