@@ -1,6 +1,8 @@
 import java.util.Scanner;
 /* This QCA calculator is for Students 
  * that earn 6 credits for completing each module.
+ * Created By Alan Stewart.
+ * This is for the CSIS UL grading system.
  */
 public class QCA {
   
