@@ -1,114 +1,101 @@
 import java.util.Scanner;
+
 /* This QCA calculator is for Students 
  * that earn 6 credits for completing each module.
  * Created By Alan Stewart.
  * This is for the CSIS UL grading system.
  */
 public class QCA {
-  
+
 	public static void main(String[] args) {
-		
+
 		Scanner input = new Scanner(System.in);
-		
+
 		System.out.println("Enter in Number of Modules: ");
-		
+
 		int moduleNum = input.nextInt();
-		
+
 		double qca = 0.00;
-		
+
 		double avgQca = 0.0;
-		
+
 		int i = 0;
-		
-		while(i < moduleNum)
-		{	
-			System.out.println("Enter in grade (E.g. 'A1', 'B3): ");
-			
+
+		while (i < moduleNum) {
+			System.out.println("Enter in grade (E.g. 'A1', 'B3'): ");
+
 			String grade = input.next();
-			
-			if(grade.equals("A1") || grade.equals("a1"))
-			{
+
+			if (grade.equals("A1") || grade.equals("a1")) {
 				avgQca += 4.0;
-				
+
 				i++;
-			}
-			else if(grade.equals("A2") || grade.equals("a2"))
-			{
+			} else if (grade.equals("A2") || grade.equals("a2")) {
 				avgQca += 3.6;
-				
+
 				i++;
-			}
-			else if(grade.equals("B1") || grade.equals("b1"))
-			{
+			} else if (grade.equals("B1") || grade.equals("b1")) {
 				avgQca += 3.2;
-				
+
 				i++;
-			}
-			else if(grade.equals("B2") || grade.equals("b2"))
-			{
+			} else if (grade.equals("B2") || grade.equals("b2")) {
 				avgQca += 3.0;
-				
+
 				i++;
-			}
-			else if(grade.equals("B3") || grade.equals("b3"))
-			{
+			} else if (grade.equals("B3") || grade.equals("b3")) {
 				avgQca += 2.8;
-				
+
 				i++;
-			}
-			else if(grade.equals("C1") || grade.equals("c1"))
-			{
+			} else if (grade.equals("C1") || grade.equals("c1")) {
 				avgQca += 2.6;
-				
+
 				i++;
-			}
-			else if(grade.equals("C2") || grade.equals("c2"))
-			{
+			} else if (grade.equals("C2") || grade.equals("c2")) {
 				avgQca += 2.4;
-				
+
 				i++;
-			}
-			else if(grade.equals("C3") || grade.equals("c3"))
-			{
+			} else if (grade.equals("C3") || grade.equals("c3")) {
 				avgQca += 2.0;
-				
+
 				i++;
-			}
-			else if(grade.equals("D1") || grade.equals("d1"))
-			{
+			} else if (grade.equals("D1") || grade.equals("d1")) {
 				avgQca += 1.6;
-				
+
 				i++;
-			}
-			else if(grade.equals("D2") || grade.equals("d2"))
-			{
+			} else if (grade.equals("D2") || grade.equals("d2")) {
 				avgQca += 1.2;
-				
+
 				i++;
-			}
-			else if(grade.equals("F") || grade.equals("f"))
-			{
+			} else if (grade.equals("F") || grade.equals("f")) {
 				avgQca += 0.00;
-				
+
 				i++;
-			}
-			else if(grade.equals("NG") || grade.equals("ng"))
-			{
+			} else if (grade.equals("NG") || grade.equals("ng")) {
 				avgQca += 0.00;
-				
+
 				i++;
-			}
-			else
-			{
+			} else {
 				System.out.println("Incorrect!!!");
 			}
-				
+
 		}
-		
-		qca = avgQca/moduleNum;
-		
+
+		qca = avgQca / moduleNum;
 		System.out.println(qca);
+
+		if (qca >= 3.40) {
+			System.out.println("First class honours!! Well Done!!");
+
+		} else if (qca < 3.40 && qca >= 3.00) {
+			System.out
+					.println("Second class honours grade 1 (2.1)!! Well Done!!");
+		} else if (qca < 3.00 && qca >= 2.60) {
+			System.out
+					.println("Second class honours grade 2 (2.2)!! Well Done!!");
+		} else if (qca < 2.60 && qca >= 2.00) {
+			System.out.println("Third class honours!! Well Done!!");
+		} else {
+			System.out.println("Got to work harder!!");
+		}
 	}
-
 }
-
